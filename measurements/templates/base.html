@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BLOOD SUGAR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #336;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 20px 0;
+        }
+
+        .measurement-details {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .measurement-date {
+            color: #3300FF;
+            font-size: 20px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .measurement-value, .measurement-notes {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .button-container {
+        text-align: center;
+        margin-top: 10px;
+        }
+
+        .button-container form {
+        display: inline-block;
+        text-decoration: bold;
+        }
+
+      .button-container input[type="submit"],
+        .button-container button {
+           margin: 5px;
+        background-color: #87CEEB;
+        padding: 15px 24px;
+        width: 150px;
+        font-weight: bold;
+        font-size: 14px;
+        }
+
+        .button-container button:hover,
+        .button-container input[type="submit"]:hover {
+           background-color: #0069d9;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>BLOOD SUGAR MEASUREMENTS</h1>
+
+    {% block content %}
+    {% endblock %}
+
+    <hr/>
+</body>
+</html>
+

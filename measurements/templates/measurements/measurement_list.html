@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+    {% block content %}
+    <h2>Measurements list:</h2>
+    <ul>
+        {% if measurements %}
+            {% for measurement in measurements %}
+                <li><a href="{% url 'measurement_detail' measurement.id %}">{{ measurement.measured_date }}<a/></li>
+            {% endfor %}
+        {% else %}
+            No measurements yet.
+        {% endif %}
+    </ul>
+
+    {% endblock %}
