@@ -11,9 +11,16 @@
     <form method="POST" action="{% url 'measurement_delete' measurement.id %}">
         {% csrf_token %}
         <input type="hidden" name="action" value="delete">
-        <input type="submit" value="Delete" class="delete-button">
+        <input type="submit" value="Delete" class="delete-button" onclick="return confirmAction()">
         <button type="submit" name="action" value="back">Back</button>
     </form>
 </div>
 
+ <script>
+        function confirmAction() {
+            return confirm("Are you sure you want to delete this measurement?");
+        }
+  </script>
+
 {% endblock %}
+
